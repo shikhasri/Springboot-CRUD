@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Form submitted</title>
+</head>
+<body>
+<p>For submitted successfully</p>
+<p>Previous submitted values are:</p>
+
+			<form class="form-horizontal">
+                <p style="display:inline;">Id: </p><p style="display:inline;" th:text="${user.userID}"></p>
+                <p style="display:inline;">Name: </p><p style="display:inline;" th:text="${user.name}"></p>
+                <p style="display:inline;">Age: </p><p style="display:inline;" th:text="${user.age}"></p>
+                    
+            </form>
+          
+<a href="/api/allresult">show all</a>
+<!-- <div class="container">
+   
+    <div th:if="${not #lists.isEmpty(user)}">
+        <h2>User List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                
+            </tr>
+            <tr th:each="user : ${user}">
+                <td th:text="${user.userID}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.age}"></td>
+               
+            </tr>
+        </table>
+
+    </div>
+</div> -->
+</body>
+</html>

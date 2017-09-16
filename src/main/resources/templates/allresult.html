@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+   
+    <div th:if="${not #lists.isEmpty(users)}">
+        <h2>User List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                
+            </tr>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.userID}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.age}"></td>
+               
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
